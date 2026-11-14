@@ -1,0 +1,561 @@
+
+/* ----------------------------------
+   ECODRAIN - MEMBER 4
+   ENVIRONMENTAL HEALTH MONITORING
+----------------------------------- */
+
+
+/* GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f0f7f5;
+    color: #243b38;
+    line-height: 1.6;
+}
+
+
+/* HEADER */
+
+header {
+    background: linear-gradient(135deg, #064e45, #087f70);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 15px;
+    color: #d1fae5;
+}
+
+
+/* MAIN CONTENT */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+
+/* WELCOME SECTION */
+
+.welcome {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border-left: 5px solid #0d9488;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.welcome h2 {
+    color: #065f55;
+    margin-bottom: 8px;
+}
+
+
+/* ----------------------------------
+   MAIN HEALTH MONITORING DASHBOARD
+----------------------------------- */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    border-bottom: 5px solid #0d9488;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card h3 {
+    font-size: 15px;
+    color: #52716b;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #087f70;
+}
+
+/* Individual dashboard card colours */
+
+.dashboard .card:nth-child(1) {
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+    border-bottom-color: #3b82f6;
+}
+
+.dashboard .card:nth-child(1) p {
+    color: #2563eb;
+}
+
+.dashboard .card:nth-child(2) {
+    background: linear-gradient(135deg, #d1fae5, #ecfdf5);
+    border-bottom-color: #10b981;
+}
+
+.dashboard .card:nth-child(2) p {
+    color: #059669;
+}
+
+.dashboard .card:nth-child(3) {
+    background: linear-gradient(135deg, #fef3c7, #fffbeb);
+    border-bottom-color: #f59e0b;
+}
+
+.dashboard .card:nth-child(3) p {
+    color: #d97706;
+}
+
+.dashboard .card:nth-child(4) {
+    background: linear-gradient(135deg, #fee2e2, #fff1f2);
+    border-bottom-color: #ef4444;
+}
+
+.dashboard .card:nth-child(4) p {
+    color: #dc2626;
+}
+
+
+/* GENERAL SECTION STYLING */
+
+.logs,
+.analytics {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.logs h2,
+.analytics h2 {
+    color: #065f55;
+    margin-bottom: 8px;
+}
+
+.logs > p,
+.analytics > p {
+    color: #647b75;
+    margin-bottom: 20px;
+}
+
+
+/* HEALTH LOG FORM */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: #31564e;
+    margin-top: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5d1;
+    border-radius: 7px;
+    font-size: 14px;
+    background: #ffffff;
+    color: #243b38;
+    font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0d9488;
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.12);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+
+/* BUTTONS */
+
+button {
+    background: #087f70;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 12px;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #065f55;
+}
+
+
+/* HISTORY FILTERS */
+
+.history-filters {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.history-filters input,
+.history-filters select {
+    flex: 1;
+    min-width: 180px;
+}
+
+
+/* HEALTH RECORD CARDS */
+
+.record-card {
+    background: #f8fcfa;
+    padding: 18px;
+    border-radius: 9px;
+    margin-bottom: 15px;
+    border-left: 4px solid #0d9488;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.record-card h3 {
+    color: #065f55;
+    margin-bottom: 8px;
+}
+
+.record-card p {
+    margin-bottom: 6px;
+}
+
+
+/* CONDITION STATUS LABELS */
+
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+.status.normal {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status.needs-monitoring {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status.critical {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+
+/* ALERT MANAGEMENT */
+
+.alert-card {
+    background: #fff8f5;
+    padding: 18px;
+    border-radius: 9px;
+    margin-bottom: 15px;
+    border-left: 4px solid #e76f51;
+}
+
+.alert-card h3 {
+    color: #b42318;
+    margin-bottom: 8px;
+}
+
+.alert-card p {
+    margin-bottom: 7px;
+}
+
+.alert-message {
+    color: #b42318;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+
+/* ACTIVE AND RESOLVED ALERTS */
+
+.active-status {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.resolved-status {
+    color: #15803d;
+    font-weight: bold;
+}
+
+.resolve-button {
+    background: #15803d;
+    margin-top: 10px;
+}
+
+.resolve-button:hover {
+    background: #166534;
+}
+
+
+/* ----------------------------------
+   ENVIRONMENTAL ANALYTICS DASHBOARD
+----------------------------------- */
+
+
+/* ANALYTICS SUMMARY CARDS */
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.analytics-card {
+    background: #f0fdfa;
+    padding: 22px;
+    border-radius: 16px;
+    text-align: center;
+    border-bottom: 5px solid #0d9488;
+    transition: transform 0.2s ease;
+}
+
+.analytics-card:hover {
+    transform: translateY(-4px);
+}
+
+.analytics-card h3 {
+    font-size: 15px;
+    color: #52716b;
+    margin-bottom: 10px;
+}
+
+.analytics-card p {
+    font-size: 32px;
+    font-weight: bold;
+    color: #087f70;
+}
+
+/* Individual analytics card colours */
+
+.analytics-grid .analytics-card:nth-child(1) {
+    background: linear-gradient(135deg, #d1fae5, #ecfdf5);
+    border-bottom-color: #10b981;
+}
+
+.analytics-grid .analytics-card:nth-child(1) p {
+    color: #059669;
+}
+
+.analytics-grid .analytics-card:nth-child(2) {
+    background: linear-gradient(135deg, #fef3c7, #fffbeb);
+    border-bottom-color: #f59e0b;
+}
+
+.analytics-grid .analytics-card:nth-child(2) p {
+    color: #d97706;
+}
+
+.analytics-grid .analytics-card:nth-child(3) {
+    background: linear-gradient(135deg, #fee2e2, #fff1f2);
+    border-bottom-color: #ef4444;
+}
+
+.analytics-grid .analytics-card:nth-child(3) p {
+    color: #dc2626;
+}
+
+
+/* ANALYTICS CONTENT BOXES */
+
+.analytics-box {
+    background: #f8fcfa;
+    padding: 22px;
+    border-radius: 14px;
+    margin-top: 20px;
+    border: 1px solid #e0eee8;
+}
+
+.analytics-box h3 {
+    color: #065f55;
+    margin-bottom: 15px;
+}
+
+.analytics-box p {
+    padding: 9px 12px;
+    margin-bottom: 8px;
+    background: white;
+    border-radius: 6px;
+    border-left: 3px solid #0d9488;
+}
+
+/* Frequently reported location rows */
+
+#locationAnalytics p {
+    background: linear-gradient(90deg, #e0f2fe, #f0f9ff);
+    border-left: 4px solid #0ea5e9;
+    border-radius: 9px;
+    padding: 12px 16px;
+}
+
+/* Recurring environmental issue rows */
+
+#issueAnalytics p {
+    background: linear-gradient(90deg, #fff3e0, #fffaf0);
+    border-left: 4px solid #f59e0b;
+    border-radius: 9px;
+    padding: 12px 16px;
+}
+
+
+/* ENVIRONMENTAL CONDITION CHART */
+
+#conditionChart {
+    background: #f0fdfa;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.chart-row {
+    margin-bottom: 18px;
+}
+
+.chart-row p {
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-weight: bold;
+    color: #31564e;
+    margin-bottom: 8px;
+}
+
+.chart-background {
+    width: 100%;
+    height: 18px;
+    background: #e5eeea;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.chart-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #0d9488, #34b399);
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+/* Separate chart colours */
+
+#conditionChart .chart-row:nth-child(1) .chart-bar {
+    background: linear-gradient(90deg, #10b981, #6ee7b7);
+}
+
+#conditionChart .chart-row:nth-child(2) .chart-bar {
+    background: linear-gradient(90deg, #f59e0b, #fcd34d);
+}
+
+#conditionChart .chart-row:nth-child(3) .chart-bar {
+    background: linear-gradient(90deg, #ef4444, #fca5a5);
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 850px) {
+
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .analytics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    main {
+        width: 94%;
+        margin: 18px auto;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .card {
+        padding: 15px 8px;
+    }
+
+    .card h3 {
+        font-size: 13px;
+    }
+
+    .card p {
+        font-size: 25px;
+    }
+
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .logs,
+    .analytics {
+        padding: 17px;
+    }
+
+    .history-filters {
+        flex-direction: column;
+    }
+}
